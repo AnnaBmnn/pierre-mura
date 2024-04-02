@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "continued",
+				"type": "Text"
+			},
+			"presentation": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Proident labore pariatur do anim sit labore."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
