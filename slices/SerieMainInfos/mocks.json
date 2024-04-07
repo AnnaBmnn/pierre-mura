@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "basket",
+				"type": "Text"
+			},
+			"presentation": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Incididunt id cupidatat labore. Ipsum anim proident quis aliqua excepteur ipsum id excepteur quis ipsum exercitation irure dolor ullamco adipisicing. Aliqua enim aute amet."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

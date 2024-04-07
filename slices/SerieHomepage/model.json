@@ -1,0 +1,29 @@
+{
+  "id": "serie_homepage",
+  "type": "SharedSlice",
+  "name": "SerieHomepage",
+  "description": "SerieHomepage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "serie": {
+          "type": "Link",
+          "config": {
+            "label": "Série",
+            "select": "document",
+            "customtypes": [
+              "serie"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

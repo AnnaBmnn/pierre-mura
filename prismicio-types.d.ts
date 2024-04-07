@@ -4,74 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type CustomSerieDocumentDataSlicesSlice = never;
-
-/**
- * Content for Série documents
- */
-interface CustomSerieDocumentData {
-  /**
-   * Nom field in *Série*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: custom_serie.name
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  name: prismic.KeyTextField;
-
-  /**
-   * Petite présentation field in *Série*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: custom_serie.summary
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  summary: prismic.RichTextField;
-
-  /**
-   * Ligne field in *Série*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: custom_serie.line
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  line: prismic.ImageField<never>;
-
-  /**
-   * `slices` field in *Série*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: custom_serie.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<CustomSerieDocumentDataSlicesSlice>;
-}
-
-/**
- * Série document from Prismic
- *
- * - **API ID**: `custom_serie`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type CustomSerieDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<CustomSerieDocumentData>,
-    "custom_serie",
-    Lang
-  >;
-
-type PageDocumentDataSlicesSlice = HeroSlice;
+type PageDocumentDataSlicesSlice = SerieHomepageSlice | HeroSlice;
 
 /**
  * Content for Page documents
@@ -112,7 +45,68 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = CustomSerieDocument | PageDocument;
+type SerieDocumentDataSlicesSlice = SerieMainInfosSlice;
+
+/**
+ * Content for Serie documents
+ */
+interface SerieDocumentData {
+  /**
+   * Slice Zone field in *Serie*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: serie.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<SerieDocumentDataSlicesSlice> /**
+   * Meta Description field in *Serie*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: serie.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Serie*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: serie.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *Serie*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: serie.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Serie document from Prismic
+ *
+ * - **API ID**: `serie`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SerieDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<SerieDocumentData>, "serie", Lang>;
+
+export type AllDocumentTypes = PageDocument | SerieDocument;
 
 /**
  * Primary content in *Hero → Primary*
@@ -211,6 +205,106 @@ export type RichTextSlice = prismic.SharedSlice<
   RichTextSliceVariation
 >;
 
+/**
+ * Primary content in *SerieHomepage → Items*
+ */
+export interface SerieHomepageSliceDefaultItem {
+  /**
+   * Série field in *SerieHomepage → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: serie_homepage.items[].serie
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  serie: prismic.ContentRelationshipField<"serie">;
+}
+
+/**
+ * Default variation for SerieHomepage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SerieHomepageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<SerieHomepageSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *SerieHomepage*
+ */
+type SerieHomepageSliceVariation = SerieHomepageSliceDefault;
+
+/**
+ * SerieHomepage Shared Slice
+ *
+ * - **API ID**: `serie_homepage`
+ * - **Description**: SerieHomepage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SerieHomepageSlice = prismic.SharedSlice<
+  "serie_homepage",
+  SerieHomepageSliceVariation
+>;
+
+/**
+ * Primary content in *SerieMainInfos → Primary*
+ */
+export interface SerieMainInfosSliceDefaultPrimary {
+  /**
+   * Title field in *SerieMainInfos → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: serie_main_infos.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Presentation field in *SerieMainInfos → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: serie_main_infos.primary.presentation
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  presentation: prismic.RichTextField;
+}
+
+/**
+ * Default variation for SerieMainInfos Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SerieMainInfosSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SerieMainInfosSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SerieMainInfos*
+ */
+type SerieMainInfosSliceVariation = SerieMainInfosSliceDefault;
+
+/**
+ * SerieMainInfos Shared Slice
+ *
+ * - **API ID**: `serie_main_infos`
+ * - **Description**: SerieMainInfos
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SerieMainInfosSlice = prismic.SharedSlice<
+  "serie_main_infos",
+  SerieMainInfosSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -221,12 +315,12 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
-      CustomSerieDocument,
-      CustomSerieDocumentData,
-      CustomSerieDocumentDataSlicesSlice,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
+      SerieDocument,
+      SerieDocumentData,
+      SerieDocumentDataSlicesSlice,
       AllDocumentTypes,
       HeroSlice,
       HeroSliceDefaultPrimary,
@@ -236,6 +330,14 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
+      SerieHomepageSlice,
+      SerieHomepageSliceDefaultItem,
+      SerieHomepageSliceVariation,
+      SerieHomepageSliceDefault,
+      SerieMainInfosSlice,
+      SerieMainInfosSliceDefaultPrimary,
+      SerieMainInfosSliceVariation,
+      SerieMainInfosSliceDefault,
     };
   }
 }

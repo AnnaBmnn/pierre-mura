@@ -6,4 +6,10 @@ import { defineSliceZoneComponents } from "@prismicio/vue";
 export const components = defineSliceZoneComponents({
   hero: defineAsyncComponent(() => import("./Hero/index.vue")),
   rich_text: defineAsyncComponent(() => import("./RichText/index.vue")),
+  serie_homepage: defineAsyncComponent(
+    () => import("./SerieHomepage/index.vue"),
+  ),
+  serie_main_infos: defineAsyncComponent(
+    () => import("./SerieMainInfos/index.vue"),
+  ),
 });
