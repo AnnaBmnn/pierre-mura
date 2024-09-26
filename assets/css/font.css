@@ -1,0 +1,22 @@
+
+
+@font-face {
+    font-family: 'Suisse Int\'l Book';
+    src: local('Suisse Int\'l Book'), local('SuisseIntl-Book'),
+        url('/fonts/SuisseIntl-Book.woff2') format('woff2'),
+        url('/fonts/SuisseIntl-Book.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Int\'l';
+    src: local('Suisse Int\'l'), local('SuisseIntl-Regular'),
+        url('/fonts/SuisseIntl-Regular.woff2') format('woff2'),
+        url('/fonts/SuisseIntl-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -35,6 +35,5 @@ useHead({
       :slices="serieSingle?.data.slices.slice(0) ?? []"
       :components="components"
     />
-    {{serieSingle?.data.slices[0]}}
   </div>
 </template>
