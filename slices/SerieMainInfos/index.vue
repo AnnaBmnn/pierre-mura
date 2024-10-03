@@ -17,7 +17,7 @@ defineProps(
   <section
     :data-slice-type="slice.slice_type"
     :data-slice-variation="slice.variation"
-    class="grid"
+    class="grid main-info__section"
   >
   <div class="main-info main-info--fougere"> 
     <div class="main-info__content">
@@ -90,5 +90,46 @@ defineProps(
 }
 .main-info--geranium .main-info__content {
   margin-left: 12.5%;
+}
+@media screen and (max-width: 1024px) {
+  .main-info {
+    padding-bottom: 8vh;
+    margin-bottom: 12vh;
+    min-height: 100vh;
+  }
+  .main-info__section {
+    margin-bottom: 100vh;
+  }
+  .main-info__content {
+    opacity: 1;
+    width: 100%;
+  }
+
+  .main-info--fougere {
+    grid-column: 1 / 8;
+  }
+  .main-info--geranium {
+    grid-column: 1 / 8;
+    margin-top: 0vw;
+  }
+  .main-info--geranium .main-info__content {
+    margin-left: 0%;
+
+  }
+}
+@media screen and (max-width: 830px) {
+  .main-info__content {
+    top: 22vw;
+  }
+  .main-info__content .main-info__title {
+    transform: translateX(-1.3vw);
+    font-size: 48px;
+  }
+  .main-info--fougere {
+    grid-column: 1 / 9;
+  }
+  .main-info--geranium {
+    grid-column: 1 / 9;
+  }
 }
 </style>
