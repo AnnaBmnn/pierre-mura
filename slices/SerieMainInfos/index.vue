@@ -1,3 +1,4 @@
+
 <script setup lang="ts">
 import { type Content } from "@prismicio/client";
 
@@ -163,7 +164,7 @@ function closeGallery(name) {
   opacity: 1;
 }
 .main-info--geranium {
-  grid-column: 5 / 13;
+  grid-column: 6 / 13;
   margin-top: -25vw;
 }
 .main-info--geranium img {
@@ -172,7 +173,7 @@ function closeGallery(name) {
   margin-left: 10%;
 }
 .main-info--geranium .main-info__content {
-  margin-left: 25%;
+  margin-left: 30%;
 }
 .main-info__button {
   text-transform: uppercase;
@@ -211,11 +212,11 @@ function closeGallery(name) {
   padding: 14px 0 0;
 }
 .main-info__display--right {
-  grid-column: 6 / 13;
+  grid-column: 5 / 13;
 }
 .main-info__display--left {
   grid-row: 1;
-  grid-column: 1 / 6;
+  grid-column: 1 / 8;
 }
 .main-info__picture-container {
   margin-bottom: 14px;
@@ -233,15 +234,15 @@ function closeGallery(name) {
   font-size: 18px;
   text-decoration: underline dotted;
   cursor: pointer;
-  color: black;
+  color: white;
 
 }
 .main-info__display-container--right .main-info__display-close {
-  grid-column: 1/6;
+  grid-column: 1/5;
   text-align: right;
 }
 .main-info__display-container--left .main-info__display-close {
-  grid-column: 6/13;
+  grid-column: 8/13;
   text-align: left;
   align-self: end;
   grid-row: 1;
@@ -292,3 +293,4 @@ function closeGallery(name) {
   }
 }
 </style>
+
