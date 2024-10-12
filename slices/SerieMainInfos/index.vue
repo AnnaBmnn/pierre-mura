@@ -122,6 +122,36 @@ function closeGallery(name) {
         </div>
       </div>
     </div>
+    <div class="biographie grid">
+      <div class="biographie__list-container">
+        <ul class="biographie__list">
+          <li class="biographie__list-item">
+            <span class="biographie__list-item-label">email</span>
+            <span class="biographie__list-item-content">pierre@gmail.com</span>
+          </li>
+          <li class="biographie__list-item">
+            <span class="biographie__list-item-label">tel</span>
+            <span class="biographie__list-item-content">+33 7 86 00 00 00</span>
+          </li>
+          <li class="biographie__list-item">
+            <span class="biographie__list-item-label">Instagram</span>
+            <span class="biographie__list-item-content">@pierremura</span>
+          </li>
+          <li class="biographie__list-item">
+            <span class="biographie__list-item-label"> CV</span>
+            <span class="biographie__list-item-content"> Télécharger</span>
+          </li>
+          <li class="biographie__list-item">
+            <span class="biographie__list-item-label">Livre</span>
+            <span class="biographie__list-item-content">Télécharger</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="biographie__text">
+        Pierre Mura est un sculpteur venu d'Alsace la plus belle région de France. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam reiciendis maxime numquam amet velit enim doloremque deserunt, exercitationem facere illum libero? Nemo quam sequi repellat molestias asperiores ipsa eaque? Harum.
+      </div>
+    </div>
   </section>
 </template>
 
@@ -253,6 +283,53 @@ function closeGallery(name) {
 .main-info__display-close:hover {
   text-decoration: underline;
 } 
+
+.biographie {
+  margin-top: 35vh;
+  min-height: 75vh;
+  grid-column: 1 / 13;
+  padding: 0;
+}
+
+.biographie__text {
+  grid-column: 6 / 13;
+  text-align: justify;
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 100vh;
+}
+.biographie__list-container {
+  height: 70vh;
+  grid-column: 1 / 5;
+}
+
+.biographie__list {
+  width: 100%;
+  position: sticky;
+  top: 11vw;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 ;
+}
+
+.biographie__list-item {
+  margin-bottom: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px dotted;
+}
+.biographie__list-item:hover {
+  border-bottom: 1px solid;
+}
+.biographie__list-item-label {
+  /* width: 30%; */
+  /* flex-basis: 30%; */
+}
+.biographie__list-item-content {
+  /* width: 70%; */
+  /* flex-basis: 70%; */
+}
 
 @media screen and (max-width: 1024px) {
   .main-info {

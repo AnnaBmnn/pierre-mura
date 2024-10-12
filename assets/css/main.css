@@ -38,4 +38,12 @@ button {
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
-  }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
