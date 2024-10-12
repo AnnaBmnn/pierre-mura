@@ -138,9 +138,12 @@ function closeGallery(name) {
   transition: opacity 0.4s cubic-bezier(0,.55,.12,1.02);
 }
 .main-info__content .main-info__title {
+  font-family: 'Kaeru Kaeru', 'arial';
   font-size: 68px;
   font-weight: 400;
-  transform: translateX(-0.5vw);
+  letter-spacing: -3px;
+  transform: translateY(-6px) scaleY(1.4);
+  text-transform: lowercase;
 }
 
 
@@ -173,7 +176,7 @@ function closeGallery(name) {
   margin-left: 10%;
 }
 .main-info--geranium .main-info__content {
-  margin-left: 30%;
+  margin-left: 28%;
 }
 .main-info__button {
   text-transform: uppercase;
@@ -295,7 +298,7 @@ function closeGallery(name) {
     top: 22vw;
   }
   .main-info__content .main-info__title {
-    transform: translateX(-1.3vw);
+    /* transform: translateX(-1.3vw); */
     font-size: 48px;
   }
   .main-info--fougere {
