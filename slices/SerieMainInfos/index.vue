@@ -151,6 +151,13 @@ function closeGallery(name) {
       <div class="biographie__text">
         Pierre Mura est un sculpteur venu d'Alsace la plus belle région de France. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam reiciendis maxime numquam amet velit enim doloremque deserunt, exercitationem facere illum libero? Nemo quam sequi repellat molestias asperiores ipsa eaque? Harum.
       </div>
+
+    </div>
+    <div class="bye ">
+      <div class="bye__text">
+        Merci !
+
+      </div>
     </div>
   </section>
 </template>
@@ -171,7 +178,7 @@ function closeGallery(name) {
   font-family: 'Kaeru Kaeru', 'arial';
   font-size: 68px;
   font-weight: 400;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
   transform: translateY(-6px) scaleY(1.4);
   text-transform: lowercase;
 }
@@ -285,6 +292,7 @@ function closeGallery(name) {
 } 
 
 .biographie {
+  position: relative;
   margin-top: 35vh;
   min-height: 75vh;
   grid-column: 1 / 13;
@@ -297,6 +305,7 @@ function closeGallery(name) {
   text-transform: uppercase;
   color: white;
   padding-bottom: 100vh;
+  mix-blend-mode: difference;
 }
 .biographie__list-container {
   height: 70vh;
@@ -310,6 +319,7 @@ function closeGallery(name) {
   color: white;
   text-transform: uppercase;
   margin: 0 ;
+  mix-blend-mode: difference;
 }
 
 .biographie__list-item {
@@ -329,6 +339,29 @@ function closeGallery(name) {
 .biographie__list-item-content {
   /* width: 70%; */
   /* flex-basis: 70%; */
+}
+
+.bye {
+  display: flex;
+  font-family: 'Kaeru Kaeru', 'arial';
+  font-size: 14vw;
+  color: white;
+  letter-spacing: -13px;
+  grid-column: 1 / 13;
+  margin-top: 15vw;
+  font-style: italic;
+  height: 30vh;
+  align-items: flex-end;
+  text-align: center;
+  mix-blend-mode: difference;
+  font-size: 36vw;
+
+  
+}
+
+.bye__text {
+  transform: translate(0vw, 0) scaleY(1.6);
+  margin: 0 auto -15vw;
 }
 
 @media screen and (max-width: 1024px) {
@@ -369,6 +402,15 @@ function closeGallery(name) {
     grid-column: 10/13;
     text-align: left;
   }
+  .biographie__text {
+    grid-column: 8 / 13;
+  }
+  .biographie__list-container {
+    grid-column: 1 / 8;
+  }
+  .biographie__list {
+    top: 20vw;
+  }
 }
 @media screen and (max-width: 830px) {
   .main-info__content {
@@ -398,6 +440,18 @@ function closeGallery(name) {
   .main-info__display-container--left .main-info__display-close {
     grid-column: 8/13;
     text-align: right;
+  }
+  .biographie {
+    margin-top: 10vh;
+  }
+  .biographie__text {
+    grid-column: 1 / 13;
+  }
+  .biographie__list-container {
+    grid-column: 1 / 13;
+  }
+  .biographie__list {
+    top: 20vw;
   }
 }
 </style>
