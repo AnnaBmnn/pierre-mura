@@ -51,7 +51,7 @@ defineProps(
 }
 .hero__content {
   grid-column: 6/13;
-  text-align: justify;
+  /* text-align: justify; */
   text-transform: uppercase;
 
 }
@@ -65,7 +65,7 @@ defineProps(
   .hero__content {
     margin-top: 20vw;
     grid-column: 1/13;
-    text-align: justify;
+    /* text-align: justify; */
     text-transform: uppercase;
   }
 }

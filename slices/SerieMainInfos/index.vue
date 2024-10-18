@@ -188,7 +188,7 @@ function closeGallery(name) {
   mix-blend-mode: difference;
   width: 50%;
   opacity: 0;
-  text-align: justify;
+  /* text-align: justify; */
   transition: opacity 0.4s cubic-bezier(0,.55,.12,1.02);
 }
 .main-info__content .main-info__title {
@@ -318,7 +318,7 @@ function closeGallery(name) {
 
 .biographie__text {
   grid-column: 6 / 13;
-  text-align: justify;
+  /* text-align: justify; */
   text-transform: uppercase;
   color: white;
   padding-bottom: 100vh;
