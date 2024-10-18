@@ -156,8 +156,25 @@ function closeGallery(name) {
     <div class="bye ">
       <div class="bye__text">
         Merci !
-
       </div>
+      <ul class="bye__credits grid">
+        <li class="bye__credit bye__credit--top"><span class="bye__credit-label">Design + development </span><a target="_blank" href="https://www.annabaumann.fr/">Anna Baumann</a></li>
+        <li class="bye__credit bye__credit--middle"><span class="bye__credit-label">Photographies </span><span class="bye__credit-content bye__credit-compl">????</span></li>
+        <li class="bye__credit bye__credit--bottom">
+          <span class="bye__credit-label">Fonts </span> 
+          <div class="bye__credit-content"> 
+            <div>
+              <span class="bye__credit-compl"> Kaeru Kaeru by Isabel Motz on </span>
+              <a target="_blank" href="https://velvetyne.fr/download/?font=kaeru-kaeru">velvetyne.fr</a>
+            </div>
+            <div>
+              <span class="bye__credit-compl">Suisse Int'l by </span>
+              <a target="_blank" href="https://www.swisstypefaces.com/fonts/suisse/#Int%E2%80%99l">SwissTypeface</a>
+            </div>
+
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -320,6 +337,7 @@ function closeGallery(name) {
   text-transform: uppercase;
   margin: 0 ;
   mix-blend-mode: difference;
+  font-size: 12px;
 }
 
 .biographie__list-item {
@@ -343,25 +361,81 @@ function closeGallery(name) {
 
 .bye {
   display: flex;
-  font-family: 'Kaeru Kaeru', 'arial';
-  font-size: 14vw;
-  color: white;
-  letter-spacing: -13px;
   grid-column: 1 / 13;
   margin-top: 15vw;
-  font-style: italic;
   height: 30vh;
   align-items: flex-end;
   text-align: center;
-  mix-blend-mode: difference;
-  font-size: 36vw;
-
-  
+  width: 100vw;
+  position: relative;
 }
 
 .bye__text {
+  font-family: 'Kaeru Kaeru', 'arial';
+  font-size: 14vw;
+  letter-spacing: -13px;
+  font-size: 36vw;
+  font-style: italic;
+  color: white;
   transform: translate(0vw, 0) scaleY(1.6);
-  margin: 0 auto -15vw;
+  margin: 0 auto 0vw;
+  line-height: 0.8;
+  overflow: hidden;
+  padding-right: 6vw;
+  mix-blend-mode: difference;
+}
+
+.bye__credits {
+  position: absolute;
+  bottom: -9vw;
+  /* color: #333b37; */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-transform: uppercase;
+  font-size: 12px;
+  /* width: 30vw; */
+  display: grid;
+  width: calc(100vw - 20px);
+  padding: 10px 10px 10px 0;
+}
+
+.bye__credit {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  text-align: left;
+  /* justify-content: space-between; */
+}
+.bye__credit--top {
+  grid-column: 1 / 3;
+  grid-column: 4 / 7;
+}
+.bye__credit--middle {
+  grid-column: 7 / 9;
+}
+.bye__credit--bottom {
+  grid-column: 9 / 13;
+}
+.bye__credit-label {
+  mix-blend-mode: difference;
+  color: white;
+  width: 120px;
+  text-align: left;
+}
+.bye__credit-compl {
+  mix-blend-mode: difference;
+  color: white;  
+}
+.bye__credit a {
+  color: #70a72d;
+  mix-blend-mode: none;
+}
+.bye__credit-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 1024px) {
