@@ -485,6 +485,14 @@ function closeGallery(name) {
   .biographie__list {
     top: 20vw;
   }
+  .bye {
+    height: 50vh;
+
+  }
+  .bye__credits {
+    display: flex;
+    bottom: 100%;
+  }
 }
 @media screen and (max-width: 830px) {
   .main-info__content {
