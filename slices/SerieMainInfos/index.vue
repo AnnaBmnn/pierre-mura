@@ -450,6 +450,7 @@ function closeGallery(name) {
   color: white;
   width: 120px;
   text-align: left;
+  min-width: 120px;
 }
 .bye__credit-compl {
   mix-blend-mode: difference;
