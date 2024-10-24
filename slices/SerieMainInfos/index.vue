@@ -126,30 +126,34 @@ function closeGallery(name) {
       <div class="biographie__list-container">
         <ul class="biographie__list">
           <li class="biographie__list-item">
-            <span class="biographie__list-item-label">email</span>
-            <span class="biographie__list-item-content">pierre@gmail.com</span>
+            <a href="mailto:Pierremurasculpteur@gmail.com" >
+              <span class="biographie__list-item-label">email</span>
+              <span class="biographie__list-item-content">Pierremurasculpteur@gmail.com</span>
+            </a>
           </li>
           <li class="biographie__list-item">
-            <span class="biographie__list-item-label">tel</span>
-            <span class="biographie__list-item-content">+33 7 86 00 00 00</span>
+            <a href="https://www.instagram.com/ruma_sculpt/" target="_blank">
+              <span class="biographie__list-item-label">Instagram</span>
+              <span class="biographie__list-item-content">@ruma_sculpt</span>
+            </a>
           </li>
           <li class="biographie__list-item">
-            <span class="biographie__list-item-label">Instagram</span>
-            <span class="biographie__list-item-content">@pierremura</span>
+            <a download href="./CV_Pierre_MURA_2024.png">
+              <span class="biographie__list-item-label"> CV</span>
+              <span class="biographie__list-item-content"> Télécharger</span>
+            </a>
           </li>
           <li class="biographie__list-item">
-            <span class="biographie__list-item-label"> CV</span>
-            <span class="biographie__list-item-content"> Télécharger</span>
-          </li>
-          <li class="biographie__list-item">
-            <span class="biographie__list-item-label">Livre</span>
-            <span class="biographie__list-item-content">Télécharger</span>
+            <a download href="./Portfolio_2024-2025.pdf">
+              <span class="biographie__list-item-label">Portfolio</span>
+              <span class="biographie__list-item-content">Télécharger</span>
+            </a>
           </li>
         </ul>
       </div>
 
       <div class="biographie__text">
-        Pierre Mura est un sculpteur venu d'Alsace la plus belle région de France. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam reiciendis maxime numquam amet velit enim doloremque deserunt, exercitationem facere illum libero? Nemo quam sequi repellat molestias asperiores ipsa eaque? Harum.
+        I am open to collaboration, don't hesitate to reach out.
       </div>
 
     </div>
@@ -159,7 +163,7 @@ function closeGallery(name) {
       </div>
       <ul class="bye__credits grid">
         <li class="bye__credit bye__credit--top"><span class="bye__credit-label">Design + development </span><a target="_blank" href="https://www.annabaumann.fr/">Anna Baumann</a></li>
-        <li class="bye__credit bye__credit--middle"><span class="bye__credit-label">Photographies </span><span class="bye__credit-content bye__credit-compl">????</span></li>
+        <!--<li class="bye__credit bye__credit--middle"><span class="bye__credit-label">Photographies </span><span class="bye__credit-content bye__credit-compl">????</span></li>-->
         <li class="bye__credit bye__credit--bottom">
           <span class="bye__credit-label">Fonts </span> 
           <div class="bye__credit-content"> 
@@ -340,14 +344,16 @@ function closeGallery(name) {
   font-size: 12px;
 }
 
-.biographie__list-item {
+.biographie__list-item a{
   margin-bottom: 7px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px dotted;
+  text-decoration: none;
+  color: white;
 }
-.biographie__list-item:hover {
+.biographie__list-item:hover a{
   border-bottom: 1px solid;
 }
 .biographie__list-item-label {
@@ -357,6 +363,11 @@ function closeGallery(name) {
 .biographie__list-item-content {
   /* width: 70%; */
   /* flex-basis: 70%; */
+  color: #70a72d;
+  text-decoration: none;
+}
+
+.biographie__list-item-label a {
 }
 
 .bye {
@@ -374,7 +385,7 @@ function closeGallery(name) {
   font-family: 'Kaeru Kaeru', 'arial';
   font-size: 14vw;
   letter-spacing: -13px;
-  font-size: 36vw;
+  font-size: 34vw;
   font-style: italic;
   color: white;
   transform: translate(0vw, 0) scaleY(1.6);
@@ -383,6 +394,8 @@ function closeGallery(name) {
   overflow: hidden;
   padding-right: 6vw;
   mix-blend-mode: difference;
+  white-space: nowrap;
+  max-width: 100vw;
 }
 
 .bye__credits {
