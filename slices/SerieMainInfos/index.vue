@@ -48,7 +48,7 @@ function closeGallery(name) {
       <div class="main-info__content">
         <h2 class="main-info__title">fougère</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel sapien bibendum, rutrum nisl eget, egestas quam. Cras vel dui scelerisque, faucibus ante eget, faucibus dolor. Praesent eget sapien nibh. 
+          Ancestral plant, present for millions of years, it embodies the primordial force of the plant kingdom. Through this series, I invite the viewer to immerse himself in the very essence of the plant, to feel its vital breath. The fractal form of its deployment has guided my work, inspiring a representation of the inner tension that animates it. Each leaf, each stem, seems to emerge with persistence, reflecting a silent effort, a will for growth, where every particle reveals the depth of life that animates it.
         </p>
         <button @click="openGallery('fougere')" class="main-info__button">découvrir la série</button>
 
@@ -63,31 +63,34 @@ function closeGallery(name) {
     <div class="main-info__display-container main-info__display-container--right grid js-gallery-fougere is-hidden">
       <div class="main-info__display main-info__display--right">
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere0.webp" alt="" class="main-info__picture">
+          <img loading="lazy" src="~/assets/img/fougere/fougere0.webp" alt="" class="main-info__picture">
         </div>
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere1.webp" alt="" class="main-info__picture">
+          <img loading="lazy" src="~/assets/img/fougere/fougere1.webp" alt="" class="main-info__picture">
         </div>
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere2.webp" alt="" class="main-info__picture">
+          <img loading="lazy" src="~/assets/img/fougere/fougere3.webp" alt="" class="main-info__picture">
         </div>
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere3.webp" alt="" class="main-info__picture">
+          <img loading="lazy" src="~/assets/img/fougere/fougere4.webp" alt="" class="main-info__picture">
         </div>
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere4.webp" alt="" class="main-info__picture">
+          <img loading="lazy" src="~/assets/img/fougere/fougere5.webp" alt="" class="main-info__picture">
         </div>
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere5.webp" alt="" class="main-info__picture">
+          <img loading="lazy" src="~/assets/img/fougere/fougere6.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img loading="lazy" src="~/assets/img/fougere/fougere7.webp" alt="" class="main-info__picture">
         </div>
       </div>
       <button @click="closeGallery('fougere')"  class="main-info__display-close">quitter la série</button>
     </div>
     <div class="main-info main-info--geranium"> 
       <div class="main-info__content">
-        <h2 class="main-info__title">géranium</h2>
+        <h2 class="main-info__title">Geranium</h2>
         <p >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel sapien bibendum, rutrum nisl eget, egestas quam. Cras vel dui scelerisque, faucibus ante eget, faucibus dolor. Praesent eget sapien nibh. 
+          On the window sill of the workshop, a pot of geranium remains. Each leaf, in a secret and graceful movement, unfolds one after the other, like a confidence whispered by nature. From this vegetal choreography a soft poetry is born, a series of suspended moments, where the subtle beauty of the world comes to life in the hushed silence of everyday life.
         </p>
         <button @click="openGallery('geranium')" class="main-info__button">découvrir la série</button>
       </div>
@@ -103,22 +106,28 @@ function closeGallery(name) {
       
       <div class="main-info__display main-info__display--left">
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere0.webp" alt="" class="main-info__picture">
+          <img src="~/assets/img/geranium/geranium1.webp" alt="" class="main-info__picture">
         </div>
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere1.webp" alt="" class="main-info__picture">
+          <img src="~/assets/img/geranium/geranium2.webp" alt="" class="main-info__picture">
         </div>
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere2.webp" alt="" class="main-info__picture">
+          <img src="~/assets/img/geranium/geranium3.webp" alt="" class="main-info__picture">
         </div>
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere3.webp" alt="" class="main-info__picture">
+          <img src="~/assets/img/geranium/geranium4.webp" alt="" class="main-info__picture">
         </div>
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere4.webp" alt="" class="main-info__picture">
+          <img src="~/assets/img/geranium/geranium5.webp" alt="" class="main-info__picture">
         </div>
         <div class="main-info__picture-container">
-          <img src="~/assets/img/fougere/fougere5.webp" alt="" class="main-info__picture">
+          <img src="~/assets/img/geranium/geranium6.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/geranium/geranium7.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/geranium/geranium8.webp" alt="" class="main-info__picture">
         </div>
       </div>
     </div>
@@ -232,6 +241,7 @@ function closeGallery(name) {
   max-width: unset;
   margin-top: -15vw;
   margin-left: 10%;
+  /* transform: scale(-1.2); */
 }
 .main-info--geranium .main-info__content {
   margin-left: 28%;
@@ -385,7 +395,7 @@ function closeGallery(name) {
   font-family: 'Kaeru Kaeru', 'arial';
   font-size: 14vw;
   letter-spacing: -13px;
-  font-size: 34vw;
+  font-size: 35vw;
   font-style: italic;
   color: white;
   transform: translate(0vw, 0) scaleY(1.6);
@@ -396,6 +406,7 @@ function closeGallery(name) {
   mix-blend-mode: difference;
   white-space: nowrap;
   max-width: 100vw;
+  width: 100vw;
 }
 
 .bye__credits {
