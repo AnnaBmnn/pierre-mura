@@ -50,7 +50,7 @@ function closeGallery(name) {
         <p>
           Ancestral plant, present for millions of years, it embodies the primordial force of the plant kingdom. Through this series, I invite the viewer to immerse himself in the very essence of the plant, to feel its vital breath. The fractal form of its deployment has guided my work, inspiring a representation of the inner tension that animates it. Each leaf, each stem, seems to emerge with persistence, reflecting a silent effort, a will for growth, where every particle reveals the depth of life that animates it.
         </p>
-        <button @click="openGallery('fougere')" class="main-info__button">découvrir la série</button>
+        <button @click="openGallery('fougere')" class="main-info__button">discover</button>
 
       </div>
 
@@ -92,7 +92,7 @@ function closeGallery(name) {
         <p >
           On the window sill of the workshop, a pot of geranium remains. Each leaf, in a secret and graceful movement, unfolds one after the other, like a confidence whispered by nature. From this vegetal choreography a soft poetry is born, a series of suspended moments, where the subtle beauty of the world comes to life in the hushed silence of everyday life.
         </p>
-        <button @click="openGallery('geranium')" class="main-info__button">découvrir la série</button>
+        <button @click="openGallery('geranium')" class="main-info__button">discover</button>
       </div>
 
       <img 
