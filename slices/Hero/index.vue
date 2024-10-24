@@ -32,7 +32,7 @@ defineProps(
 
 <style scoped>
 .hero {
-  color: white;
+  color: #CBC4C8;
   mix-blend-mode: difference;
   margin-bottom: 25vh;
 }
