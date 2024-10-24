@@ -244,7 +244,7 @@ function closeGallery(name) {
   /* transform: scale(-1.2); */
 }
 .main-info--geranium .main-info__content {
-  margin-left: 28%;
+  margin-left: 30%;
 }
 .main-info__button {
   text-transform: uppercase;
@@ -337,10 +337,12 @@ function closeGallery(name) {
   color: white;
   padding-bottom: 100vh;
   mix-blend-mode: difference;
+  display: none;
 }
 .biographie__list-container {
   height: 70vh;
   grid-column: 1 / 5;
+  margin-bottom: 10vw;
 }
 
 .biographie__list {
@@ -398,7 +400,7 @@ function closeGallery(name) {
   font-size: 35vw;
   font-style: italic;
   color: white;
-  transform: translate(0vw, 0) scaleY(1.6);
+  transform: translate(0vw, 10px) scaleY(1.6);
   margin: 0 auto 0vw;
   line-height: 0.8;
   overflow: hidden;
@@ -406,6 +408,7 @@ function closeGallery(name) {
   mix-blend-mode: difference;
   white-space: nowrap;
   max-width: 100vw;
+  pointer-events: none;
   width: 100vw;
 }
 
@@ -531,6 +534,12 @@ function closeGallery(name) {
   }
   .main-info--geranium {
     grid-column: 1 / 9;
+  }
+  .main-info__img--fougere {
+    margin-left: 35vw;
+  }
+  img.main-info__img--geranium {
+    margin-left: 35vw;
   }
   .main-info__display--right {
     grid-column: 1 / 13;

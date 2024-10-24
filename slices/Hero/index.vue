@@ -42,7 +42,7 @@ defineProps(
   margin: 7px 0 0;
   text-transform: uppercase;
   font-size: 11.5vw;
-  line-height: 0.75;
+  line-height: 0.8;
   font-family: 'Suisse Int\'l Book';
   font-weight: 500;
   letter-spacing: -0.2vw;
