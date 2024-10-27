@@ -84,7 +84,7 @@ function closeGallery(name) {
           <img loading="lazy" src="~/assets/img/fougere/fougere7.webp" alt="" class="main-info__picture">
         </div>
       </div>
-      <button @click="closeGallery('fougere')"  class="main-info__display-close">quitter la série</button>
+      <button @click="closeGallery('fougere')"  class="main-info__display-close">quit</button>
     </div>
     <div class="main-info main-info--geranium"> 
       <div class="main-info__content">
@@ -102,7 +102,7 @@ function closeGallery(name) {
       />
     </div>
     <div class="main-info__display-container main-info__display-container--left grid js-gallery-geranium is-hidden">
-      <button @click="closeGallery('geranium')"  class="main-info__display-close">quitter la série</button>
+      <button @click="closeGallery('geranium')"  class="main-info__display-close">quit</button>
       
       <div class="main-info__display main-info__display--left">
         <div class="main-info__picture-container">
@@ -128,6 +128,57 @@ function closeGallery(name) {
         </div>
         <div class="main-info__picture-container">
           <img src="~/assets/img/geranium/geranium8.webp" alt="" class="main-info__picture">
+        </div>
+      </div>
+    </div>
+    <div class="main-info main-info--ornement"> 
+      <div class="main-info__content">
+        <h2 class="main-info__title">Ornement contemporains</h2>
+        <p >
+          Central theme in the history of art, the plant has seen its presence fading with the advent of concrete in the field of architecture and creation. With his career as an ornamental sculptor, he seeks to reintroduce the language of plant forms into this series, giving them a universal voice. Through his works, he explores how these once ubiquitous natural motifs can reconnect with our daily lives and resonate with each other, reaffirming their place in contemporary aesthetics.
+        </p>
+        <button @click="openGallery('ornement')" class="main-info__button">discover</button>
+      </div>
+
+      <img 
+        src="~/assets/img/ornement.svg"
+        class="main-info__img--ornement"
+        alt="trace en noir sur blanc d'une sculpture en forme de fougère" 
+      />
+    </div>
+    <div class="main-info__display-container main-info__display-container--right grid js-gallery-ornement is-hidden">
+      <button @click="closeGallery('ornement')"  class="main-info__display-close">quit</button>
+      
+      <div class="main-info__display main-info__display--right">
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/ornement/ornement1.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/ornement/ornement2.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/ornement/ornement3.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/ornement/ornement4.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/ornement/ornement5.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/ornement/ornement6.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/ornement/ornement7.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/ornement/ornement8.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/ornement/ornement9.webp" alt="" class="main-info__picture">
+        </div>
+        <div class="main-info__picture-container">
+          <img src="~/assets/img/ornement/ornement10.webp" alt="" class="main-info__picture">
         </div>
       </div>
     </div>
@@ -209,8 +260,10 @@ function closeGallery(name) {
   font-size: 68px;
   font-weight: 400;
   letter-spacing: -1px;
-  transform: translateY(-6px) scaleY(1.4);
+  transform: translateY(-25%) scaleY(1.4);
   text-transform: lowercase;
+  line-height: 0.8;
+
 }
 
 
@@ -246,6 +299,18 @@ function closeGallery(name) {
 .main-info--geranium .main-info__content {
   margin-left: 30%;
 }
+
+.main-info--ornement {
+  grid-column: 1 / 8;
+  margin-top: -15vw;
+}
+.main-info--geranium img {
+  max-width: unset;
+  margin-top: 0vw;
+  margin-left: 0%;
+  /* transform: scale(-1.2); */
+}
+
 .main-info__button {
   text-transform: uppercase;
   font-style: italic;
